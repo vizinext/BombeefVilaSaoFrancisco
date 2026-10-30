@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Açougue Bom Beef Vila São Francisco | Cortes premium para o seu churrasco</title>
+<meta name="description" content="Picanha, ancho, chorizo, Black Angus, Wagyu, espetos, linguiças e tudo para o churrasco. Peça pelo WhatsApp e retire na loja ou receba em casa. Açougue Bom Beef Vila São Francisco.">
+<meta name="theme-color" content="#120d0c">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Açougue Bom Beef Vila São Francisco">
+<meta property="og:description" content="Cortes premium, espetos, linguiças e tudo para o seu churrasco. Peça pelo WhatsApp.">
+<meta property="og:image" content="assets/img/pic-bbf.jpg">
+<link rel="icon" href="assets/img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/logo.jpg">
+<style>
+:root{
+ --bg:#120d0c;--bg2:#1b1412;--card:#211816;--line:rgba(255,255,255,.1);
+ --ink:#f7efe6;--mute:#b8a99a;--red:#d8323f;--red2:#b3221f;--gold:#e7b75f;--wa:#1faa59;--wa2:#178a48;
+ --r:18px;--max:1160px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:76px;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Oswald,Impact,sans-serif;font-weight:600;line-height:1.08;letter-spacing:.01em;text-transform:uppercase;margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+section{padding:72px 0}
+.kick{display:inline-block;font:600 12px/1 Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.h2{font-size:clamp(30px,5vw,46px)}
+.h2 em{font-style:normal;color:var(--red)}
+.lead{color:var(--mute);font-size:17px;max-width:620px;margin:14px 0 0}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;font:700 16px/1 Inter,sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 30px -8px rgba(31,170,89,.6)}
+.btn-wa:hover{background:var(--wa2)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 30px -8px rgba(216,50,63,.55)}
+.btn-red:hover{background:var(--red2)}
+.btn-ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid rgba(255,255,255,.22)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-sm{min-height:42px;padding:0 18px;font-size:14px}
+
+/* topo */
+.top{position:fixed;inset:0 0 auto;z-index:50;transition:background .25s,box-shadow .25s}
+.top.solid{background:rgba(18,13,12,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:600 15px/1.1 Oswald,sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.brand img{width:40px;height:40px;border-radius:50%}
+.brand small{display:block;font:500 11px/1.2 Inter,sans-serif;color:var(--mute);text-transform:none;letter-spacing:0}
+.nav{display:flex;gap:22px;margin-left:auto;font-size:14px;font-weight:500}
+.nav a{text-decoration:none;color:var(--mute)}.nav a:hover{color:var(--ink)}
+.top .btn{margin-left:8px}
+@media(max-width:900px){.nav{display:none}.top .btn{margin-left:auto}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:110px 0 70px;overflow:hidden;isolation:isolate}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero .poster{background:url(assets/img/pic-bbf.jpg) center/cover}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(18,13,12,.94) 0%,rgba(18,13,12,.78) 45%,rgba(18,13,12,.45) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 30%)}
+.hero-in{max-width:660px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(216,50,63,.14);border:1px solid rgba(216,50,63,.45);color:#ffd6d9;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:22px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(216,50,63,.25);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(216,50,63,0)}}
+.hero h1{font-size:clamp(40px,7.4vw,78px)}
+.hero h1 span{color:var(--red)}
+.hero p.sub{font-size:clamp(17px,2.2vw,20px);color:#e6d9cc;margin:20px 0 30px;max-width:560px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:14px;color:#ddcfc1}
+.proof span{display:flex;align-items:center;gap:8px}
+.proof svg{width:18px;height:18px;color:var(--gold);flex:none}
+@media(max-width:560px){.ctas .btn{width:100%}}
+
+/* faixa benefícios */
+.bens{background:var(--bg2);border-block:1px solid var(--line);padding:0}
+.bens .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.ben{padding:26px 20px;display:flex;gap:14px;align-items:flex-start;border-right:1px solid var(--line)}
+.ben:last-child{border-right:0}
+.ben .ic{width:44px;height:44px;border-radius:12px;background:rgba(216,50,63,.14);display:grid;place-items:center;flex:none;font-size:22px}
+.ben b{display:block;font-size:15px}
+.ben small{color:var(--mute);font-size:13.5px;line-height:1.45;display:block;margin-top:2px}
+@media(max-width:900px){.bens .wrap{grid-template-columns:1fr 1fr}.ben:nth-child(2){border-right:0}.ben:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:520px){.bens .wrap{grid-template-columns:1fr}.ben{border-right:0;border-bottom:1px solid var(--line)}.ben:last-child{border-bottom:0}}
+
+/* produtos */
+.prods{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+@media(max-width:1000px){.prods{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.prods{grid-template-columns:repeat(2,1fr);gap:12px}}
+.prod{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.prod:hover{transform:translateY(-4px);border-color:rgba(216,50,63,.5)}
+.prod .ph{position:relative;aspect-ratio:4/5;background:#2a1f1c;overflow:hidden}
+.prod .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.prod:hover .ph img{transform:scale(1.05)}
+.tag{position:absolute;top:10px;left:10px;background:var(--red);color:#fff;font:700 11px/1 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 9px;border-radius:6px}
+.tag.gold{background:var(--gold);color:#2a1a08}
+.prod .bd{padding:14px 14px 16px;display:flex;flex-direction:column;flex:1}
+.prod h3{font-size:18px;letter-spacing:.02em}
+.prod .t{color:var(--mute);font-size:13px;line-height:1.4;margin:6px 0 10px;flex:1}
+.prod .pr{font:600 22px/1 Oswald,sans-serif;color:#fff;margin-bottom:12px}
+.prod .pr small{font:500 13px Inter,sans-serif;color:var(--mute)}
+.prod .btn{width:100%;min-height:44px;font-size:14px;padding:0 12px}
+@media(max-width:420px){.prod h3{font-size:16px}.prod .pr{font-size:19px}.prod .btn{font-size:13px}}
+.more{margin-top:32px;display:flex;justify-content:center}
+
+/* categorias */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+@media(max-width:900px){.cats{grid-template-columns:repeat(2,1fr)}}
+.cat{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:1/1;text-decoration:none;display:block;isolation:isolate}
+.cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .5s}
+.cat:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(10,7,6,.92) 0%,rgba(10,7,6,.1) 60%)}
+.cat:hover img{transform:scale(1.06)}
+.cat div{position:absolute;left:16px;right:16px;bottom:14px}
+.cat b{font:600 22px/1.1 Oswald,sans-serif;text-transform:uppercase;display:block}
+.cat small{color:#e0d2c4;font-size:13px}
+
+/* calculadora */
+.calc{background:radial-gradient(1000px 500px at 85% 0%,rgba(216,50,63,.18),transparent 60%),var(--bg2);border-block:1px solid var(--line)}
+.calc .grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:900px){.calc .grid2{grid-template-columns:1fr;gap:28px}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px}
+.lbl{font-size:13px;font-weight:600;color:var(--mute);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:block}
+.cnt{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.cnt button{width:52px;height:52px;border-radius:14px;border:1px solid var(--line);background:#2b201d;color:var(--ink);font-size:26px;cursor:pointer}
+.cnt button:hover{border-color:var(--red)}
+.cnt output{flex:1;text-align:center;font:600 40px/1 Oswald,sans-serif}
+.cnt output small{display:block;font:500 13px Inter,sans-serif;color:var(--mute);margin-top:4px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:22px}
+.seg button{border:1px solid var(--line);background:#2b201d;color:var(--ink);border-radius:12px;padding:10px 6px;font:600 14px/1.2 Inter,sans-serif;cursor:pointer}
+.seg button small{display:block;font-weight:500;font-size:12px;color:var(--mute);margin-top:3px}
+.seg button.on{background:rgba(216,50,63,.18);border-color:var(--red)}
+.res{border-top:1px dashed rgba(255,255,255,.18);padding-top:18px;margin-bottom:20px}
+.res .big{font:600 34px/1 Oswald,sans-serif;color:var(--gold)}
+.res ul{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px;font-size:15px}
+.res li{display:flex;justify-content:space-between;gap:12px}
+.res li span{color:var(--mute)}
+.panel .btn{width:100%}
+.fine{font-size:12.5px;color:var(--mute);margin:12px 0 0;text-align:center}
+
+/* passos */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;counter-reset:s}
+@media(max-width:800px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;position:relative}
+.step:before{counter-increment:s;content:"0" counter(s);font:700 44px/1 Oswald,sans-serif;color:rgba(216,50,63,.35);display:block;margin-bottom:12px}
+.step h3{font-size:21px;margin-bottom:8px}
+.step p{color:var(--mute);margin:0;font-size:15px}
+
+/* eventos */
+.ev .grid2{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+@media(max-width:900px){.ev .grid2{grid-template-columns:1fr;gap:28px}}
+.ev-pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ev-pics img{border-radius:var(--r);aspect-ratio:4/5;object-fit:cover;width:100%}
+.ev-pics img:nth-child(2){margin-top:40px}
+.checks{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks li:before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--red);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center;margin-top:1px}
+
+/* autoridade */
+.auth{background:var(--bg2);border-block:1px solid var(--line)}
+.auth .grid2{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.auth .logo-big{width:200px;height:200px;border-radius:50%;box-shadow:0 0 0 6px rgba(216,50,63,.25),0 30px 60px -20px #000}
+@media(max-width:760px){.auth .grid2{grid-template-columns:1fr;text-align:center;justify-items:center}.auth .logo-big{width:150px;height:150px}.auth .lead{margin-left:auto;margin-right:auto}}
+.lines{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+@media(max-width:760px){.lines{justify-content:center}}
+.lines span{border:1px solid var(--line);background:rgba(255,255,255,.04);padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:500}
+.auth .btn{margin-top:24px}
+
+/* faq */
+.faq{max-width:800px;margin:36px auto 0}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:17px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--red);transition:transform .2s}
+.faq details[open] summary:after{transform:translateY(-50%) rotate(45deg)}
+.faq p{color:var(--mute);margin:0 0 20px}
+
+/* local */
+.loc .grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+@media(max-width:900px){.loc .grid2{grid-template-columns:1fr}}
+.info{display:grid;gap:14px;margin:26px 0}
+.info div{display:flex;gap:14px;align-items:flex-start}
+.info .ic{width:42px;height:42px;border-radius:12px;background:rgba(216,50,63,.14);display:grid;place-items:center;flex:none;font-size:19px}
+.info b{display:block;font-size:14px;color:var(--mute);font-weight:500}
+.info span{font-size:16px;font-weight:600}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:320px;background:var(--card)}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(.3) contrast(1.05)}
+
+/* cta final */
+.final{text-align:center;background:linear-gradient(180deg,transparent,rgba(216,50,63,.14)),var(--bg)}
+.final h2{font-size:clamp(32px,6vw,58px)}
+.final .ctas{justify-content:center;margin-top:28px}
+.final .lead{margin:14px auto 0}
+
+footer{border-top:1px solid var(--line);padding:30px 0 110px;color:var(--mute);font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+footer a{color:var(--mute)}
+
+/* whatsapp flutuante + barra mobile */
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 30px -6px rgba(0,0,0,.6);transition:transform .2s}
+.fab:hover{transform:scale(1.06)}
+.fab svg{width:32px;height:32px;color:#fff}
+.fab:before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ring 2.4s infinite}
+@keyframes ring{from{transform:scale(1);opacity:.8}to{transform:scale(1.6);opacity:0}}
+.mbar{display:none}
+@media(max-width:760px){
+ .fab{display:none}
+ .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(18,13,12,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+ .mbar.on{transform:none}
+ .mbar .btn{min-height:48px;padding:0 10px;font-size:15px}
+}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 0 1-1.44-5.01c0-5.2 4.23-9.43 9.44-9.43a9.38 9.38 0 0 1 9.43 9.44c0 5.2-4.24 9.42-9.45 9.42zm8.03-17.46A11.27 11.27 0 0 0 12.05.72C5.8.72.7 5.8.7 12.07c0 2 .52 3.95 1.52 5.67L.6 23.6l6-1.57a11.33 11.33 0 0 0 5.43 1.38h.01c6.26 0 11.35-5.09 11.36-11.35a11.3 11.3 0 0 0-3.32-8.03z"/></symbol>
+ <symbol id="ck" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></symbol>
+</svg>
+
+<header class="top" id="top">
+ <div class="wrap">
+  <a class="brand" href="#inicio"><img src="assets/img/logo.jpg" alt="" width="40" height="40"><span>Bom Beef<small>Vila São Francisco</small></span></a>
+  <nav class="nav" aria-label="Seções">
+   <a href="#destaques">Cortes</a><a href="#churrasco">Calculadora</a><a href="#eventos">Eventos</a><a href="#duvidas">Dúvidas</a><a href="#onde">Onde estamos</a>
+  </nav>
+  <a class="btn btn-wa btn-sm" data-wa="Olá, Bom Beef Vila São Francisco! Gostaria de fazer um pedido." data-track="wa_header" href="#"><svg><use href="#wa"/></svg>Pedir agora</a>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+ <div class="poster" aria-hidden="true"></div>
+ <video autoplay muted loop playsinline preload="metadata" poster="assets/img/pic-bbf.jpg" aria-hidden="true">
+  <source src="assets/hero.webm" type="video/webm"><source src="assets/hero.mp4" type="video/mp4">
+ </video>
+ <div class="wrap">
+  <div class="hero-in">
+   <div class="badge"><i></i>Pedidos pelo WhatsApp · retirada ou entrega</div>
+   <h1>O churrasco que todo mundo <span>elogia</span> começa aqui</h1>
+   <p class="sub">Picanha, ancho, chorizo, Black Angus e Wagyu selecionados no Açougue Bom Beef da Vila São Francisco. Você escolhe, a gente separa no ponto certo e te avisa quando estiver pronto.</p>
+   <div class="ctas">
+    <a class="btn btn-wa" data-wa="Olá, Bom Beef Vila São Francisco! Gostaria de fazer um pedido." data-track="wa_hero" href="#"><svg><use href="#wa"/></svg>Pedir pelo WhatsApp</a>
+    <a class="btn btn-ghost" href="catalogo.html" data-track="catalogo_hero">Ver catálogo com preços</a>
+   </div>
+   <div class="proof">
+    <span><svg><use href="#ck"/></svg>Cortes premium e maturados</span>
+    <span><svg><use href="#ck"/></svg>Pix, cartão ou dinheiro</span>
+    <span><svg><use href="#ck"/></svg>Atendimento para eventos</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="bens" aria-label="Por que comprar na Bom Beef">
+ <div class="wrap">
+  <div class="ben"><div class="ic">🥩</div><div><b>Cortes selecionados</b><small>Linhas Bom Beef, Reserva Black Angus, by Netão e FSW Reserva do Criador.</small></div></div>
+  <div class="ben"><div class="ic">🔪</div><div><b>Do jeito que você pede</b><small>Capa da picanha, espessura do bife: diga nas observações e a gente prepara.</small></div></div>
+  <div class="ben"><div class="ic">🛵</div><div><b>Retire ou receba</b><small>Peça pelo WhatsApp e escolha retirar na loja ou receber no seu endereço.</small></div></div>
+  <div class="ben"><div class="ic">🔥</div><div><b>Tudo num lugar só</b><small>Carvão, acendedor, sal de parrilla, pão de alho, farofa e acompanhamentos.</small></div></div>
+ </div>
+</section>
+
+<section id="destaques">
+ <div class="wrap">
+  <div class="center reveal">
+   <span class="kick">Mais pedidos</span>
+   <h2 class="h2">Os cortes que fazem a <em>fama</em> da casa</h2>
+   <p class="lead">Toque em “Quero este” e o pedido já chega pronto no nosso WhatsApp. Preços por quilo; o valor final é confirmado na pesagem.</p>
+  </div>
+  <div class="prods" id="prods"></div>
+  <div class="more"><a class="btn btn-ghost" href="catalogo.html" data-track="catalogo_destaques">Ver todos os mais de 60 produtos →</a></div>
+ </div>
+</section>
+
+<section class="calc" id="churrasco">
+ <div class="wrap grid2">
+  <div class="reveal">
+   <span class="kick">Calculadora de churrasco</span>
+   <h2 class="h2">Quanto de carne eu <em>preciso</em>?</h2>
+   <p class="lead">Chega de sobrar ou, pior, faltar. Diga quantas pessoas vão e o apetite da turma: a gente calcula e você manda a lista direto para o nosso WhatsApp.</p>
+   <ul class="checks">
+    <li>Sugestão de quantidade por tipo de carne</li>
+    <li>Carvão e pão de alho já incluídos na conta</li>
+    <li>Nossa equipe revisa e indica os melhores cortes</li>
+   </ul>
+  </div>
+  <div class="panel reveal">
+   <span class="lbl" id="l-pp">Quantas pessoas?</span>
+   <div class="cnt" role="group" aria-labelledby="l-pp">
+    <button type="button" data-pp="-1" aria-label="Menos pessoas">−</button>
+    <output id="pp" aria-live="polite">10<small>pessoas</small></output>
+    <button type="button" data-pp="1" aria-label="Mais pessoas">+</button>
+   </div>
+   <span class="lbl">Apetite da turma</span>
+   <div class="seg" id="ap">
+    <button type="button" data-g="300">Leve<small>300 g/pessoa</small></button>
+    <button type="button" data-g="400" class="on">Normal<small>400 g/pessoa</small></button>
+    <button type="button" data-g="500">Caprichado<small>500 g/pessoa</small></button>
+   </div>
+   <div class="res">
+    <span class="lbl">Total de carne sugerido</span>
+    <div class="big" id="kg">4,0 kg</div>
+    <ul id="mix"></ul>
+   </div>
+   <a class="btn btn-wa" id="calc-go" data-track="wa_calculadora" href="#"><svg><use href="#wa"/></svg>Enviar lista e pedir orçamento</a>
+   <p class="fine">Estimativa de referência. A equipe confirma quantidades e valores no atendimento.</p>
+  </div>
+ </div>
+</section>
+
+<section id="categorias">
+ <div class="wrap">
+  <div class="center reveal">
+   <span class="kick">Muito além da picanha</span>
+   <h2 class="h2">Tudo para o seu <em>churrasco</em></h2>
+  </div>
+  <div class="cats">
+   <a class="cat reveal" href="catalogo.html"><img loading="lazy" src="assets/img/esp-bov.jpg" alt="Espetos"><div><b>Espetos</b><small>Bovino, coração, frango, kafta</small></div></a>
+   <a class="cat reveal" href="catalogo.html"><img loading="lazy" src="assets/img/lin-tex.jpg" alt="Linguiças"><div><b>Linguiças</b><small>Specialli e choripan</small></div></a>
+   <a class="cat reveal" href="catalogo.html"><img loading="lazy" src="assets/img/kit-wag.jpg" alt="Hamburgada"><div><b>Hamburgada</b><small>Kits Grill e Wagyu</small></div></a>
+   <a class="cat reveal" href="catalogo.html"><img loading="lazy" src="assets/img/acm-coa.jpg" alt="Acompanhamentos"><div><b>Acompanhamentos</b><small>Pão de alho, coalho, vinagrete</small></div></a>
+   <a class="cat reveal" href="catalogo.html"><img loading="lazy" src="assets/img/emp-kit.jpg" alt="Empório"><div><b>Empório</b><small>Sal de parrilla, farofas</small></div></a>
+   <a class="cat reveal" href="catalogo.html"><img loading="lazy" src="assets/img/car-ipe.jpg" alt="Carvão"><div><b>Carvão</b><small>Ipê 2,4 a 7 kg e acendedores</small></div></a>
+   <a class="cat reveal" href="catalogo.html"><img loading="lazy" src="assets/img/pri-fsw.jpg" alt="Cortes especiais"><div><b>Cortes especiais</b><small>Prime rib, short rib, denver</small></div></a>
+   <a class="cat reveal" href="catalogo.html"><img loading="lazy" src="assets/img/chp-net.jpg" alt="Choripan"><div><b>Choripan</b><small>Aurora e del Netão</small></div></a>
+  </div>
+ </div>
+</section>
+
+<section class="calc" id="como">
+ <div class="wrap">
+  <div class="center reveal">
+   <span class="kick">Simples assim</span>
+   <h2 class="h2">Seu pedido em <em>3 passos</em></h2>
+  </div>
+  <div class="steps">
+   <div class="step reveal"><h3>Escolha</h3><p>Navegue pelo catálogo com preços, monte o carrinho e diga como quer cada corte.</p></div>
+   <div class="step reveal"><h3>Envie</h3><p>Seu pedido chega pronto no nosso WhatsApp, com itens, total estimado e forma de pagamento.</p></div>
+   <div class="step reveal"><h3>Receba</h3><p>A equipe confirma a pesagem e o valor final. Você retira na loja ou recebe em casa.</p></div>
+  </div>
+  <div class="more"><a class="btn btn-red" href="catalogo.html" data-track="catalogo_passos">Montar meu pedido agora</a></div>
+ </div>
+</section>
+
+<section class="ev" id="eventos">
+ <div class="wrap grid2">
+  <div class="ev-pics reveal">
+   <img loading="lazy" src="assets/img/pic-res.jpg" alt="Picanha Reserva Black Angus">
+   <img loading="lazy" src="assets/img/esp-kaf.jpg" alt="Espetos de kafta com queijo">
+  </div>
+  <div class="reveal">
+   <span class="kick">Aniversários · empresas · família</span>
+   <h2 class="h2">Vai receber muita gente? <em>Deixa com a gente.</em></h2>
+   <p class="lead">Churrasco em família, aniversário ou confraternização da empresa: conte a data e o número de convidados e montamos o pedido ideal para o seu evento.</p>
+   <ul class="checks">
+    <li>Cardápio sugerido pela quantidade de convidados</li>
+    <li>Carnes, espetos, acompanhamentos e carvão num pedido só</li>
+    <li>Data e horário combinados com antecedência</li>
+   </ul>
+   <div class="ctas">
+    <a class="btn btn-wa" data-wa="Olá, Bom Beef Vila São Francisco! Quero agendar um evento. Data: ___ · Convidados: ___" data-track="wa_eventos" href="#"><svg><use href="#wa"/></svg>Agendar meu evento</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="auth">
+ <div class="wrap grid2">
+  <img class="logo-big reveal" loading="lazy" src="assets/img/logo.jpg" alt="O Açougue Bom Beef">
+  <div class="reveal">
+   <span class="kick">O Açougue Bom Beef</span>
+   <h2 class="h2">A carne do <em>Netão</em>, aqui no bairro</h2>
+   <p class="lead">A Vila São Francisco faz parte da rede O Açougue Bom Beef, do açougueiro e churrasqueiro Domingos Neto, o Netão. Os mesmos padrões de corte e seleção, perto da sua casa.</p>
+   <div class="lines"><span>Linha Premium Bom Beef</span><span>Reserva Black Angus</span><span>Reserva by Netão</span><span>Wagyu by Netão</span><span>FSW Reserva do Criador</span><span>Sais de Parrilla Netão</span></div>
+   <a class="btn btn-ghost" id="reviews" data-track="google_reviews" href="https://www.google.com/search?q=bom+beef+vila+s%C3%A3o+francisco" target="_blank" rel="noopener">⭐ Ver avaliações no Google</a>
+  </div>
+ </div>
+</section>
+
+<section id="duvidas">
+ <div class="wrap">
+  <div class="center reveal">
+   <span class="kick">Dúvidas frequentes</span>
+   <h2 class="h2">Antes de <em>pedir</em></h2>
+  </div>
+  <div class="faq">
+   <details><summary>Como faço meu pedido?</summary><p>Pelo WhatsApp. Você pode montar o carrinho no nosso <a href="catalogo.html">catálogo online</a> e enviar com um toque, ou simplesmente nos mandar uma mensagem dizendo o que precisa.</p></details>
+   <details><summary>Vocês entregam?</summary><p>Sim. No pedido você escolhe entre retirar na loja ou receber em casa. Confirmamos a disponibilidade de entrega para o seu endereço no atendimento.</p></details>
+   <details><summary>Quais as formas de pagamento?</summary><p>Pix, cartão ou dinheiro.</p></details>
+   <details><summary>Por que o valor é “estimado”?</summary><p>Os cortes são vendidos por quilo. Como cada peça tem um peso, o valor final pode variar um pouco e é confirmado na pesagem, antes de você pagar.</p></details>
+   <details><summary>Posso pedir o corte do meu jeito?</summary><p>Pode. Use o campo de observações para pedir picanha com capa fina, bifes de 2 cm, peça inteira ou porcionada, e o que mais precisar.</p></details>
+   <details><summary>Atendem eventos e empresas?</summary><p>Sim. Informe a data, o horário e o número de pessoas e montamos o pedido com antecedência. Use o botão “Agendar meu evento”.</p></details>
+  </div>
+ </div>
+</section>
+
+<section class="loc calc" id="onde">
+ <div class="wrap grid2">
+  <div class="reveal">
+   <span class="kick">Onde estamos</span>
+   <h2 class="h2">Venha <em>conhecer</em> a loja</h2>
+   <div class="info">
+    <div><div class="ic">📍</div><p style="margin:0"><b>Endereço</b><span id="cfg-end">Vila São Francisco</span></p></div>
+    <div><div class="ic">🕒</div><p style="margin:0"><b>Horário</b><span id="cfg-hor">Consulte pelo WhatsApp</span></p></div>
+    <div><div class="ic">💬</div><p style="margin:0"><b>WhatsApp</b><span id="cfg-tel">Fale com a gente</span></p></div>
+   </div>
+   <div class="ctas">
+    <a class="btn btn-red" id="maps" data-track="maps" href="#" target="_blank" rel="noopener">Como chegar</a>
+    <a class="btn btn-ghost" id="ig" data-track="instagram" href="#" target="_blank" rel="noopener" hidden>Instagram</a>
+   </div>
+  </div>
+  <div class="map reveal"><iframe id="mapf" title="Mapa do Açougue Bom Beef Vila São Francisco" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+ </div>
+</section>
+
+<section class="final">
+ <div class="wrap reveal">
+  <span class="kick">Fim de semana chegando</span>
+  <h2>Garanta a carne do seu <span style="color:var(--red)">churrasco</span></h2>
+  <p class="lead">Faça seu pedido com antecedência e encontre tudo separado, no ponto certo.</p>
+  <div class="ctas">
+   <a class="btn btn-wa" data-wa="Olá, Bom Beef Vila São Francisco! Gostaria de fazer um pedido." data-track="wa_final" href="#"><svg><use href="#wa"/></svg>Pedir pelo WhatsApp</a>
+   <a class="btn btn-ghost" href="catalogo.html" data-track="catalogo_final">Ver catálogo</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <span>© <span id="yr"></span> Açougue Bom Beef Vila São Francisco</span>
+  <span><a href="catalogo.html">Catálogo</a> · <a href="#eventos">Eventos</a> · <a href="#onde">Onde estamos</a></span>
+ </div>
+</footer>
+
+<a class="fab" data-wa="Olá, Bom Beef Vila São Francisco! Gostaria de fazer um pedido." data-track="wa_flutuante" href="#" aria-label="Falar no WhatsApp"><svg><use href="#wa"/></svg></a>
+<div class="mbar" id="mbar">
+ <a class="btn btn-ghost" href="catalogo.html" data-track="catalogo_mbar">Catálogo</a>
+ <a class="btn btn-wa" data-wa="Olá, Bom Beef Vila São Francisco! Gostaria de fazer um pedido." data-track="wa_mbar" href="#"><svg><use href="#wa"/></svg>Pedir agora</a>
+</div>
+
+<script>
+/* ===== CONFIGURAÇÃO DA LOJA: preencha estes dados ===== */
+var CONFIG={
+ whatsapp:"",            // só números, com DDI e DDD. Ex.: "5511999999999"
+ telefoneExibido:"",     // como aparece na página. Ex.: "(11) 99999-9999"
+ endereco:"",            // Ex.: "Rua Exemplo, 123 – Vila São Francisco, São Paulo – SP"
+ horario:"",             // Ex.: "Seg a sáb 8h–20h · Dom 8h–14h"
+ instagram:"",           // Ex.: "https://instagram.com/bombeefvilasaofrancisco"
+ nome:"Bom Beef Vila São Francisco"
+};
+/* ====================================================== */
+
+var FEAT=[
+ {id:"pic-bbf",n:"Picanha Bom Beef",t:"Linha Premium da casa",pr:271.90,tag:"Mais vendida"},
+ {id:"pic-res",n:"Picanha Black Angus",t:"Reserva Black · Wessel",pr:235.90,tag:"Premium"},
+ {id:"cho-boy",n:"Chorizo by Netão",t:"Reserva Especial · Best Beef",pr:145.90,tag:"Premium"},
+ {id:"den-fsw",n:"Denver Steak FSW",t:"Reserva do Criador · peças de ~500 g",pr:273.90,tag:"Especial"},
+ {id:"pri-fsw",n:"Prime Rib FSW",t:"Fazenda Recreio · com osso",pr:219.90,tag:"Especial"},
+ {id:"anc-grl",n:"Ancho Linha Grill",t:"Linha Grill · Bom Beef",pr:139.90},
+ {id:"kit-wag",n:"Kit Hambúrguer Wagyu",t:"2 burgers Wagyu + pão + queijo",pr:109.90,un:1,tag:"Kit"},
+ {id:"esp-bov",n:"Espeto Bovino",t:"Lombinho · 6 un · 600 g",pr:51.90,un:1}
+];
+
+function brl(v){return "R$ "+v.toFixed(2).replace(".",",")}
+function wa(msg){return CONFIG.whatsapp?"https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(msg):"catalogo.html"}
+function track(name){try{(window.dataLayer=window.dataLayer||[]).push({event:"cta_click",cta:name});if(window.fbq&&name.indexOf("wa_")==0)fbq("track","Contact")}catch(e){}}
+function bindWa(el,msg){el.href=wa(msg);if(CONFIG.whatsapp){el.target="_blank";el.rel="noopener"}}
+
+/* produtos em destaque */
+document.getElementById("prods").innerHTML=FEAT.map(function(p){
+ return '<article class="prod reveal"><div class="ph"><img loading="lazy" src="assets/img/'+p.id+'.jpg" alt="'+p.n+'">'+(p.tag?'<span class="tag'+(p.tag=="Mais vendida"?' gold':'')+'">'+p.tag+'</span>':'')+'</div><div class="bd"><h3>'+p.n+'</h3><div class="t">'+p.t+'</div><div class="pr">'+brl(p.pr)+' <small>/ '+(p.un?'un':'kg')+'</small></div><a class="btn btn-wa" data-track="wa_produto_'+p.id+'" data-wa="Olá, '+CONFIG.nome+'! Quero pedir: '+p.n+' ('+brl(p.pr)+(p.un?'/un':'/kg')+'). Qual a quantidade disponível?" href="#"><svg><use href="#wa"/></svg>Quero este</a></div></article>';
+}).join("");
+
+/* calculadora */
+var PP=10,G=400;
+function kgs(v){return v<1?Math.round(v*1000)+" g":v.toFixed(1).replace(".",",")+" kg"}
+function calc(){
+ var tot=PP*G/1000,bov=tot*.6,lin=tot*.25,out=tot*.15,car=Math.max(1,Math.ceil(tot*1.2/2.4)),pao=Math.max(1,Math.ceil(PP/5));
+ document.getElementById("pp").firstChild.nodeValue=PP;
+ document.getElementById("kg").textContent=kgs(tot);
+ var rows=[["Cortes bovinos (picanha, ancho, chorizo)",kgs(bov)],["Linguiças e espetos",kgs(lin)],["Frango, coração ou kafta",kgs(out)],["Carvão Ipê 2,4 kg",car+(car>1?" sacos":" saco")],["Pão de alho (5 un)",pao+(pao>1?" pacotes":" pacote")]];
+ document.getElementById("mix").innerHTML=rows.map(function(r){return "<li><span>"+r[0]+"</span><b>"+r[1]+"</b></li>"}).join("");
+ var msg="Olá, "+CONFIG.nome+"! Usei a calculadora de churrasco do site:\n\n• Pessoas: "+PP+"\n• Apetite: "+G+" g por pessoa\n• Total de carne: "+kgs(tot)+"\n\n"+rows.map(function(r){return "• "+r[0]+": "+r[1]}).join("\n")+"\n\nPodem me ajudar a montar o pedido e passar o orçamento?";
+ bindWa(document.getElementById("calc-go"),msg);
+}
+[].forEach.call(document.querySelectorAll("[data-pp]"),function(b){b.addEventListener("click",function(){PP=Math.max(2,Math.min(200,PP+(+b.dataset.pp)*(PP>=30?5:1)));calc()})});
+[].forEach.call(document.querySelectorAll("#ap button"),function(b){b.addEventListener("click",function(){G=+b.dataset.g;[].forEach.call(b.parentNode.children,function(x){x.className=x==b?"on":""});calc()})});
+calc();
+
+/* links do WhatsApp e rastreamento */
+[].forEach.call(document.querySelectorAll("[data-wa]"),function(a){bindWa(a,a.dataset.wa)});
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-track]");if(a)track(a.dataset.track)});
+
+/* dados da loja */
+var q=encodeURIComponent(CONFIG.endereco||"Açougue Bom Beef Vila São Francisco");
+document.getElementById("maps").href="https://www.google.com/maps/search/?api=1&query="+q;
+document.getElementById("mapf").src="https://maps.google.com/maps?q="+q+"&z=15&output=embed";
+if(CONFIG.endereco)document.getElementById("cfg-end").textContent=CONFIG.endereco;
+if(CONFIG.horario)document.getElementById("cfg-hor").textContent=CONFIG.horario;
+if(CONFIG.telefoneExibido)document.getElementById("cfg-tel").textContent=CONFIG.telefoneExibido;
+if(CONFIG.instagram){var ig=document.getElementById("ig");ig.href=CONFIG.instagram;ig.hidden=false}
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+/* SEO local */
+var ld={"@context":"https://schema.org","@type":"Store","name":"Açougue "+CONFIG.nome,"image":location.origin+location.pathname.replace(/[^/]*$/,"")+"assets/img/logo.jpg","url":location.href.split("#")[0],"priceRange":"$$","paymentAccepted":"Pix, Cartão, Dinheiro","servesCuisine":"Churrasco"};
+if(CONFIG.endereco)ld.address=CONFIG.endereco;
+if(CONFIG.telefoneExibido)ld.telephone=CONFIG.telefoneExibido;
+var s=document.createElement("script");s.type="application/ld+json";s.textContent=JSON.stringify(ld);document.head.appendChild(s);
+
+/* topo sólido, barra mobile e animações */
+var hdr=document.getElementById("top"),mb=document.getElementById("mbar");
+function onScroll(){var y=window.scrollY;hdr.classList.toggle("solid",y>40);mb.classList.toggle("on",y>window.innerHeight*.6)}
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+if("IntersectionObserver" in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target)}})},{rootMargin:"0px 0px -8% 0px"});
+ [].forEach.call(document.querySelectorAll(".reveal"),function(el){io.observe(el)});
+}else[].forEach.call(document.querySelectorAll(".reveal"),function(el){el.classList.add("in")});
+</script>
+</body>
+</html>
