@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Açougue Bom Beef Vila São Francisco | Cortes premium para o seu churrasco</title>
-<meta name="description" content="Picanha, ancho, chorizo, Black Angus, Wagyu, espetos, linguiças e tudo para o churrasco. Peça pelo WhatsApp e retire na loja ou receba em casa. Açougue Bom Beef Vila São Francisco.">
+<meta name="description" content="Nota 4,7 no Google com 294 avaliações. Picanha, ancho, chorizo, Black Angus, Wagyu, espetos, linguiças e tudo para o churrasco. Peça pelo WhatsApp e retire na loja ou receba em casa. Açougue Bom Beef Vila São Francisco.">
 <meta name="theme-color" content="#120d0c">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
@@ -173,6 +173,41 @@ section{padding:72px 0}
 .lines span{border:1px solid var(--line);background:rgba(255,255,255,.04);padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:500}
 .auth .btn{margin-top:24px}
 
+/* nota google */
+.rate{display:inline-flex;align-items:center;gap:10px;margin-top:26px;text-decoration:none;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:10px 14px}
+.rate:hover{background:rgba(255,255,255,.1)}
+.rate b{font:600 26px/1 Oswald,sans-serif}
+.stars{color:#fbbc04;letter-spacing:2px;font-size:16px;line-height:1}
+.stars.p47{color:transparent;background:linear-gradient(90deg,#fbbc04 94%,rgba(255,255,255,.25) 94%);-webkit-background-clip:text;background-clip:text}
+.rate small{display:block;color:var(--mute);font-size:12.5px;margin-top:3px}
+
+/* depoimentos */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+@media(max-width:900px){.revs{grid-template-columns:1fr}}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;margin:0}
+.rev blockquote{margin:14px 0 20px;font-size:16px;line-height:1.6;flex:1}
+.rev figcaption{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:16px}
+.rev .av{width:40px;height:40px;border-radius:50%;background:var(--red);display:grid;place-items:center;font:600 17px Oswald,sans-serif;flex:none}
+.rev figcaption b{display:block;font-size:15px}
+.rev figcaption small{color:var(--mute);font-size:12.5px}
+.score{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:22px}
+.score b{font:600 54px/1 Oswald,sans-serif}
+.score .stars{font-size:22px}
+.score small{display:block;color:var(--mute);font-size:14px;margin-top:6px;text-align:left}
+
+/* experiência */
+.exp .grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:900px){.exp .grid2{grid-template-columns:1fr;gap:28px}}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0 28px}
+.feats div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.feats b{display:block;font-size:15px}
+.feats small{color:var(--mute);font-size:13px;line-height:1.4;display:block;margin-top:2px}
+@media(max-width:420px){.feats{grid-template-columns:1fr}}
+.exp-pic{position:relative}
+.exp-pic img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.exp-pic .chip{position:absolute;left:16px;bottom:16px;right:16px;background:rgba(18,13,12,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14px}
+.exp-pic .chip b{color:var(--gold)}
+
 /* faq */
 .faq{max-width:800px;margin:36px auto 0}
 .faq details{border-bottom:1px solid var(--line)}
@@ -233,7 +268,7 @@ footer a{color:var(--mute)}
  <div class="wrap">
   <a class="brand" href="#inicio"><img src="assets/img/logo.jpg" alt="" width="40" height="40"><span>Bom Beef<small>Vila São Francisco</small></span></a>
   <nav class="nav" aria-label="Seções">
-   <a href="#destaques">Cortes</a><a href="#churrasco">Calculadora</a><a href="#eventos">Eventos</a><a href="#duvidas">Dúvidas</a><a href="#onde">Onde estamos</a>
+   <a href="#destaques">Cortes</a><a href="#churrasco">Calculadora</a><a href="#restaurante">Restaurante</a><a href="#avaliacoes">Avaliações</a><a href="#eventos">Eventos</a><a href="#duvidas">Dúvidas</a><a href="#onde">Onde estamos</a>
   </nav>
   <a class="btn btn-wa btn-sm" data-wa="Olá, Bom Beef Vila São Francisco! Gostaria de fazer um pedido." data-track="wa_header" href="#"><svg><use href="#wa"/></svg>Pedir agora</a>
  </div>
@@ -259,6 +294,7 @@ footer a{color:var(--mute)}
     <span><svg><use href="#ck"/></svg>Pix, cartão ou dinheiro</span>
     <span><svg><use href="#ck"/></svg>Atendimento para eventos</span>
    </div>
+   <a class="rate" data-reviews data-track="google_rating_hero" href="#" target="_blank" rel="noopener"><b>4,7</b><span><span class="stars p47" aria-hidden="true">★★★★★</span><small>294 avaliações no Google</small></span></a>
   </div>
  </div>
 </section>
@@ -354,6 +390,57 @@ footer a{color:var(--mute)}
  </div>
 </section>
 
+<section class="exp calc" id="restaurante">
+ <div class="wrap grid2">
+  <div class="reveal">
+   <span class="kick">Experiência Bom Beef</span>
+   <h2 class="h2">Escolha o corte. <em>A gente assa</em> pra você.</h2>
+   <p class="lead">Além do açougue, a Bom Beef Vila São Francisco tem salão: você escolhe a carne no balcão e nossa equipe prepara no ponto que você pedir, com guarnições da casa.</p>
+   <div class="feats">
+    <div><b>🔥 Corte na brasa</b><small>Do mal passado ao bem passado, do seu jeito</small></div>
+    <div><b>🍽️ Almoço executivo</b><small>Opção prática para o dia a dia</small></div>
+    <div><b>🍺 Chopp gelado</b><small>Para o happy hour com os amigos</small></div>
+    <div><b>🎶 Música ambiente</b><small>Lugar agradável para a família</small></div>
+   </div>
+   <div class="ctas">
+    <a class="btn btn-wa" data-wa="Olá, Bom Beef Vila São Francisco! Gostaria de reservar uma mesa. Dia: ___ · Horário: ___ · Pessoas: ___" data-track="wa_restaurante" href="#"><svg><use href="#wa"/></svg>Reservar mesa</a>
+   </div>
+  </div>
+  <div class="exp-pic reveal">
+   <img loading="lazy" src="assets/img/den-fsw.jpg" alt="Denver Steak FSW Reserva do Criador">
+   <div class="chip">“Excelente no preparo, tanto as guarnições quanto o churrasco nas porções.” <b>· Maiara Z.</b></div>
+  </div>
+ </div>
+</section>
+
+<section id="avaliacoes">
+ <div class="wrap">
+  <div class="center reveal">
+   <span class="kick">Quem prova, volta</span>
+   <h2 class="h2">O que dizem nossos <em>clientes</em></h2>
+   <div class="score"><b>4,7</b><div><span class="stars p47" aria-label="4,7 de 5 estrelas">★★★★★</span><small>294 avaliações no Google</small></div></div>
+  </div>
+  <div class="revs">
+   <figure class="rev reveal">
+    <span class="stars" aria-label="5 estrelas">★★★★★</span>
+    <blockquote>“A qualidade das carnes é espetacular, sempre no ponto certo, e destaco a picanha e a salada de maionese – sabores de outro mundo! O atendimento dos funcionários é exemplar.”</blockquote>
+    <figcaption><span class="av">R</span><span><b>Ray S.</b><small>Local Guide · Google</small></span></figcaption>
+   </figure>
+   <figure class="rev reveal">
+    <span class="stars" aria-label="5 estrelas">★★★★★</span>
+    <blockquote>“Se for falar de qualidade, vamos falar da franquia Bom Beef do Vila São Francisco! Maionese deliciosa, vinagrete top… Os executivos também são sensacionais! Vale muito a pena conhecer!”</blockquote>
+    <figcaption><span class="av">M</span><span><b>Maiara Z.</b><small>Local Guide · Google</small></span></figcaption>
+   </figure>
+   <figure class="rev reveal">
+    <span class="stars" aria-label="5 estrelas">★★★★★</span>
+    <blockquote>“Lugar agradável e as atendentes foram bem simpáticas. Comida estava boa. Gostei de tudo, inclusive da playlist. Parabéns pelo trabalho.”</blockquote>
+    <figcaption><span class="av">R</span><span><b>Rani</b><small>Local Guide · Google</small></span></figcaption>
+   </figure>
+  </div>
+  <div class="more"><a class="btn btn-ghost" data-reviews data-track="google_reviews_secao" href="#" target="_blank" rel="noopener">⭐ Ver todas as 294 avaliações</a></div>
+ </div>
+</section>
+
 <section class="ev" id="eventos">
  <div class="wrap grid2">
   <div class="ev-pics reveal">
@@ -384,7 +471,7 @@ footer a{color:var(--mute)}
    <h2 class="h2">A carne do <em>Netão</em>, aqui no bairro</h2>
    <p class="lead">A Vila São Francisco faz parte da rede O Açougue Bom Beef, do açougueiro e churrasqueiro Domingos Neto, o Netão. Os mesmos padrões de corte e seleção, perto da sua casa.</p>
    <div class="lines"><span>Linha Premium Bom Beef</span><span>Reserva Black Angus</span><span>Reserva by Netão</span><span>Wagyu by Netão</span><span>FSW Reserva do Criador</span><span>Sais de Parrilla Netão</span></div>
-   <a class="btn btn-ghost" id="reviews" data-track="google_reviews" href="https://www.google.com/search?client=ms-android-xiaomi-terr1-rso2&amp;hs=CxEW&amp;sca_esv=54a73f9e2ca843da&amp;sxsrf=AKL5yDj0pxv-lsAi2T-oIRFeVZdNW3bLMg:1793330709479&amp;q=avalia%C3%A7%C3%B5es+sobre+a%C3%A7ougue+bom+beef+vila+s%C3%A3o+francisco:+carnes,+cortes+especiais,+picanha+em+sp+s%C3%A3o+paulo&amp;uds=AE2AFgai3riiU9qQcCvfhgnMbbrwjkkwOk26TcQYyceXsPnnHSS6DrlWaSTzfCeReqElTkZdIO5d8kMfe8lr86CUcAU9EzwdR4exL8T8F9wqeBlcZb2DVOXPC90ahko3LJ9_zA9IeRtPWCrpeKzm0WbmJCeP6rE3P0qZ7W0_7n05k_DN9StnkVDxgDdX7sXjyTBRNpuAtEuyXYGA9UwrDRXaZWqxdblF1QGCdkLbwBRRYosfUYDq0P8jwhS01hd80gP0LvtaHOLGiOMvX5Kgz4xMfi5_jfFxrlnmq-yebuDVr1tmbHlCWN2sloZ1iLrku_S78A5ms1jAg_ubwfA5goQzpG2LX7sBAvxdwUk68WuQTCc2nBCOk2Vp94GKiLkHhjADvyAy1bl78mlJ0zMAtClzC8guoBixPimlg8FSn0Lb71y3q49iU_9YGYDoLTZpKlg3WKDHU-L1h5mFFYWTZjjz12_7Qe-D6HzooLjrPhWOnRlwQdZvnJ85DddkaP0xMPeI7RYVhjgSw4Id2Eu7O_3PNZu5fqKQuK1bJ7nyoOqY3Uc0lc9iTrC_EUKT4fDyg4A9TC-ai-n_aEGXhwtx4exmAY70d47YtQ&amp;si=AE1YtOqiKPb2pdLXAi8quZ9vbH4aVq_aX8-3H9iFBLpRNK95c0XJDtHg4JjvoMPuq9NA5-ViJmb6JPULbZtF6uaZFulNOnhvavhoX5j3Fs1Nle33OadqK559rKyNaJgID-570QQvJBCEEc5SmUvppLnTNKr1gCz2o0mApJUoLPlPZ7lLuH9H3cjgFr5FNaK2cFe4bDw95d2VUiFgDUngy_Ct4ndx40M3n1Yz2ZFnO-08ODWp038LEr-HMPRGcsNfF1E25_7oI4HT&amp;sa=X&amp;sqi=2&amp;ved=2ahUKEwjZxpy_5eCXAxXWlZUCHVgjEgYQk8gLegQIHBAB&amp;ictx=1&amp;stq=1&amp;cs=1&amp;lei=FQ7kapnoHNar1sQP2MbIMA#ebo=1" target="_blank" rel="noopener">⭐ Ver avaliações no Google</a>
+   <a class="btn btn-ghost" id="reviews" data-reviews data-track="google_reviews" href="#" target="_blank" rel="noopener">⭐ Ver avaliações no Google</a>
   </div>
  </div>
 </section>
@@ -401,6 +488,7 @@ footer a{color:var(--mute)}
    <details><summary>Quais as formas de pagamento?</summary><p>Pix, cartão ou dinheiro.</p></details>
    <details><summary>Por que o valor é “estimado”?</summary><p>Os cortes são vendidos por quilo. Como cada peça tem um peso, o valor final pode variar um pouco e é confirmado na pesagem, antes de você pagar.</p></details>
    <details><summary>Posso pedir o corte do meu jeito?</summary><p>Pode. Use o campo de observações para pedir picanha com capa fina, bifes de 2 cm, peça inteira ou porcionada, e o que mais precisar.</p></details>
+   <details><summary>Posso comer aí na loja?</summary><p>Pode. Você escolhe o corte no açougue e a nossa equipe assa para você, com guarnições da casa. Também servimos almoço executivo e chopp. Para grupos, reserve a mesa pelo WhatsApp.</p></details>
    <details><summary>Atendem eventos e empresas?</summary><p>Sim. Informe a data, o horário e o número de pessoas e montamos o pedido com antecedência. Use o botão “Agendar meu evento”.</p></details>
   </div>
  </div>
@@ -459,7 +547,8 @@ var CONFIG={
  endereco:"",            // Ex.: "Rua Exemplo, 123 – Vila São Francisco, São Paulo – SP"
  horario:"",             // Ex.: "Seg a sáb 8h–20h · Dom 8h–14h"
  instagram:"",           // Ex.: "https://instagram.com/bombeefvilasaofrancisco"
- nome:"Bom Beef Vila São Francisco"
+ nome:"Bom Beef Vila São Francisco",
+ avaliacoes:"https://www.google.com/search?client=ms-android-xiaomi-terr1-rso2&hs=CxEW&sca_esv=54a73f9e2ca843da&sxsrf=AKL5yDj0pxv-lsAi2T-oIRFeVZdNW3bLMg:1793330709479&q=avalia%C3%A7%C3%B5es+sobre+a%C3%A7ougue+bom+beef+vila+s%C3%A3o+francisco:+carnes,+cortes+especiais,+picanha+em+sp+s%C3%A3o+paulo&uds=AE2AFgai3riiU9qQcCvfhgnMbbrwjkkwOk26TcQYyceXsPnnHSS6DrlWaSTzfCeReqElTkZdIO5d8kMfe8lr86CUcAU9EzwdR4exL8T8F9wqeBlcZb2DVOXPC90ahko3LJ9_zA9IeRtPWCrpeKzm0WbmJCeP6rE3P0qZ7W0_7n05k_DN9StnkVDxgDdX7sXjyTBRNpuAtEuyXYGA9UwrDRXaZWqxdblF1QGCdkLbwBRRYosfUYDq0P8jwhS01hd80gP0LvtaHOLGiOMvX5Kgz4xMfi5_jfFxrlnmq-yebuDVr1tmbHlCWN2sloZ1iLrku_S78A5ms1jAg_ubwfA5goQzpG2LX7sBAvxdwUk68WuQTCc2nBCOk2Vp94GKiLkHhjADvyAy1bl78mlJ0zMAtClzC8guoBixPimlg8FSn0Lb71y3q49iU_9YGYDoLTZpKlg3WKDHU-L1h5mFFYWTZjjz12_7Qe-D6HzooLjrPhWOnRlwQdZvnJ85DddkaP0xMPeI7RYVhjgSw4Id2Eu7O_3PNZu5fqKQuK1bJ7nyoOqY3Uc0lc9iTrC_EUKT4fDyg4A9TC-ai-n_aEGXhwtx4exmAY70d47YtQ&si=AE1YtOqiKPb2pdLXAi8quZ9vbH4aVq_aX8-3H9iFBLpRNK95c0XJDtHg4JjvoMPuq9NA5-ViJmb6JPULbZtF6uaZFulNOnhvavhoX5j3Fs1Nle33OadqK559rKyNaJgID-570QQvJBCEEc5SmUvppLnTNKr1gCz2o0mApJUoLPlPZ7lLuH9H3cjgFr5FNaK2cFe4bDw95d2VUiFgDUngy_Ct4ndx40M3n1Yz2ZFnO-08ODWp038LEr-HMPRGcsNfF1E25_7oI4HT&sa=X&sqi=2&ved=2ahUKEwjZxpy_5eCXAxXWlZUCHVgjEgYQk8gLegQIHBAB&ictx=1&stq=1&cs=1&lei=FQ7kapnoHNar1sQP2MbIMA#ebo=1"
 };
 /* ====================================================== */
 
@@ -500,7 +589,8 @@ function calc(){
 [].forEach.call(document.querySelectorAll("#ap button"),function(b){b.addEventListener("click",function(){G=+b.dataset.g;[].forEach.call(b.parentNode.children,function(x){x.className=x==b?"on":""});calc()})});
 calc();
 
-/* links do WhatsApp e rastreamento */
+/* links do WhatsApp, avaliações e rastreamento */
+[].forEach.call(document.querySelectorAll("[data-reviews]"),function(a){a.href=CONFIG.avaliacoes});
 [].forEach.call(document.querySelectorAll("[data-wa]"),function(a){bindWa(a,a.dataset.wa)});
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-track]");if(a)track(a.dataset.track)});
 
