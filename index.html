@@ -224,7 +224,7 @@ section{padding:72px 0}
 .info div{display:flex;gap:14px;align-items:flex-start}
 .info .ic{width:42px;height:42px;border-radius:12px;background:rgba(216,50,63,.14);display:grid;place-items:center;flex:none;font-size:19px}
 .info b{display:block;font-size:14px;color:var(--mute);font-weight:500}
-.info span{font-size:16px;font-weight:600}
+.info span{font-size:16px;font-weight:600;white-space:pre-line}
 .map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:320px;background:var(--card)}
 .map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(.3) contrast(1.05)}
 
@@ -544,8 +544,8 @@ footer a{color:var(--mute)}
 var CONFIG={
  whatsapp:"551132944257",            // só números, com DDI e DDD. Ex.: "5511999999999"
  telefoneExibido:"(11) 3294-4257",     // como aparece na página. Ex.: "(11) 99999-9999"
- endereco:"",            // Ex.: "Rua Exemplo, 123 – Vila São Francisco, São Paulo – SP"
- horario:"",             // Ex.: "Seg a sáb 8h–20h · Dom 8h–14h"
+ endereco:"Av. Dr. Cândido Motta Filho, 545 – Lojas 02, 09 e 10 – Cidade São Francisco, São Paulo – SP, 05351-000",
+ horario:"Seg a qui 9h–21h\nSex 9h–22h · Sáb 9h–21h\nDom 9h–16h30",
  instagram:"https://www.instagram.com/bombeefvilasaofrancisco",
  nome:"Bom Beef Vila São Francisco",
  avaliacoes:"https://www.google.com/search?client=ms-android-xiaomi-terr1-rso2&hs=CxEW&sca_esv=54a73f9e2ca843da&sxsrf=AKL5yDj0pxv-lsAi2T-oIRFeVZdNW3bLMg:1793330709479&q=avalia%C3%A7%C3%B5es+sobre+a%C3%A7ougue+bom+beef+vila+s%C3%A3o+francisco:+carnes,+cortes+especiais,+picanha+em+sp+s%C3%A3o+paulo&uds=AE2AFgai3riiU9qQcCvfhgnMbbrwjkkwOk26TcQYyceXsPnnHSS6DrlWaSTzfCeReqElTkZdIO5d8kMfe8lr86CUcAU9EzwdR4exL8T8F9wqeBlcZb2DVOXPC90ahko3LJ9_zA9IeRtPWCrpeKzm0WbmJCeP6rE3P0qZ7W0_7n05k_DN9StnkVDxgDdX7sXjyTBRNpuAtEuyXYGA9UwrDRXaZWqxdblF1QGCdkLbwBRRYosfUYDq0P8jwhS01hd80gP0LvtaHOLGiOMvX5Kgz4xMfi5_jfFxrlnmq-yebuDVr1tmbHlCWN2sloZ1iLrku_S78A5ms1jAg_ubwfA5goQzpG2LX7sBAvxdwUk68WuQTCc2nBCOk2Vp94GKiLkHhjADvyAy1bl78mlJ0zMAtClzC8guoBixPimlg8FSn0Lb71y3q49iU_9YGYDoLTZpKlg3WKDHU-L1h5mFFYWTZjjz12_7Qe-D6HzooLjrPhWOnRlwQdZvnJ85DddkaP0xMPeI7RYVhjgSw4Id2Eu7O_3PNZu5fqKQuK1bJ7nyoOqY3Uc0lc9iTrC_EUKT4fDyg4A9TC-ai-n_aEGXhwtx4exmAY70d47YtQ&si=AE1YtOqiKPb2pdLXAi8quZ9vbH4aVq_aX8-3H9iFBLpRNK95c0XJDtHg4JjvoMPuq9NA5-ViJmb6JPULbZtF6uaZFulNOnhvavhoX5j3Fs1Nle33OadqK559rKyNaJgID-570QQvJBCEEc5SmUvppLnTNKr1gCz2o0mApJUoLPlPZ7lLuH9H3cjgFr5FNaK2cFe4bDw95d2VUiFgDUngy_Ct4ndx40M3n1Yz2ZFnO-08ODWp038LEr-HMPRGcsNfF1E25_7oI4HT&sa=X&sqi=2&ved=2ahUKEwjZxpy_5eCXAxXWlZUCHVgjEgYQk8gLegQIHBAB&ictx=1&stq=1&cs=1&lei=FQ7kapnoHNar1sQP2MbIMA#ebo=1"
@@ -595,7 +595,7 @@ calc();
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("[data-track]");if(a)track(a.dataset.track)});
 
 /* dados da loja */
-var q=encodeURIComponent(CONFIG.endereco||"Açougue Bom Beef Vila São Francisco");
+var q=encodeURIComponent("Açougue Bom Beef, Av. Dr. Cândido Motta Filho, 545, São Paulo - SP, 05351-000");
 document.getElementById("maps").href="https://www.google.com/maps/search/?api=1&query="+q;
 document.getElementById("mapf").src="https://maps.google.com/maps?q="+q+"&z=15&output=embed";
 if(CONFIG.endereco)document.getElementById("cfg-end").textContent=CONFIG.endereco;
@@ -606,8 +606,9 @@ document.getElementById("yr").textContent=new Date().getFullYear();
 
 /* SEO local */
 var ld={"@context":"https://schema.org","@type":"Store","name":"Açougue "+CONFIG.nome,"image":location.origin+location.pathname.replace(/[^/]*$/,"")+"assets/img/logo.jpg","url":location.href.split("#")[0],"priceRange":"$$","paymentAccepted":"Pix, Cartão, Dinheiro","servesCuisine":"Churrasco"};
-if(CONFIG.endereco)ld.address=CONFIG.endereco;
-if(CONFIG.telefoneExibido)ld.telephone=CONFIG.telefoneExibido;
+ld.address={"@type":"PostalAddress","streetAddress":"Av. Dr. Cândido Motta Filho, 545 – Lojas 02, 09 e 10","addressLocality":"São Paulo","addressRegion":"SP","postalCode":"05351-000","addressCountry":"BR"};
+ld.openingHours=["Mo-Th 09:00-21:00","Fr 09:00-22:00","Sa 09:00-21:00","Su 09:00-16:30"];
+ld.telephone="+55 11 3294-4257";
 var s=document.createElement("script");s.type="application/ld+json";s.textContent=JSON.stringify(ld);document.head.appendChild(s);
 
 /* topo sólido, barra mobile e animações */
